@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tailwind</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="../dist/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-PX37Eyhv8+eWKhHJb7cRdnJzqlTU8r+0h1xU/z2X9EjAa+8FwyevwSBhOT/PMoLMEYWvC1WgH5ue5V5JZ0cbpQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body >
+    <div class=" bg-[#F3F5FC] h-screen">
+
+        <header class="flex">
+            <img class="icon mx-10 mt-5 w-14 xl:ml-52" src="./images/Vector.png" alt="alura icon">
+            <img id="reset" class="ml-auto mr-10 mt-5 bg-[#558ed3] rounded-[50%] p-5 xl:hidden cursor-pointer" src="./images/reload.svg" alt="reset button">
+        </header>
+    
+        <main class="bg-[#F3F5FC] xl:flex xl:h-[80vh]">
+            <section class=" max-w-full max-h-[40%] xl:ml-96 xl:mt-5 xl:max-h-[80%]">
+                <textarea id="message" class="text-2xl border-none w-[80%] h-52 mx-[10%] my-[3%] resize-none outline-none bg-transparent sm:w-[90%] sm:mx-[5%] sm:text-4xl xl:h-[75%]" id="mensaje" cols="50" rows="14" placeholder="Ingrese texto aqui"></textarea>
+                <div class=" flex mb-5 justify-center opacity-50 sm:justify-start sm:ml-7 xl:mb-8">
+                    <img class="xl:w-8" src="./images/circle.svg" alt="important">
+                    <p class="text-sm ml-3 sm:text-xl">Solo se aceptan letras minusculas y sin acento.<br>
+                        Para resetear presiona el boton de recarga</p>
+                </div>
+                    <div class="buttons flex items-center flex-col sm:flex-row" >
+                        <button id="encrypt" class="text-white w-[90%] p-5 bg-[#0A3871] border-2 border-[#0A3871] mb-5 rounded-3xl sm:mb-0 sm:w-[45%] sm:mx-5 sm:text-2xl transition-all duration-500 ease-in-out hover:opacity-80 hover:scale-110 hover:border-green-400">Encriptar!</button>        
+                        <button id="decrypt" class="text-[#0A3871] w-[90%] p-5 bg-[#D8DFE8] border-2 border-[#0A3871] rounded-3xl sm:w-[45%] sm:mx-5 sm:text-2xl transition-all duration-500 ease-in-out hover:bg-opacity-10 hover:scale-110 hover:border-yellow-400">Desencriptar!</button>        
+                    </div>
+            </section>
+    
+            <img id="resetSecond" class="ml-auto hidden mr-10 bg-[#558ed3] rounded-[50%] p-5 xl:block xl:w-24 xl:h-24 cursor-pointer transition-all duration-500 ease-in-out hover:rotate-180" src="./images/reload.svg" alt="reset button">
+            
+            <section class="bg-white shadow-xl w-[90%] mx-5 my-5 rounded-3xl py-14 flex flex-col items-center sm:mx-5 sm:my-14 sm:w-[95%] xl:w-[25%] xl:ml-auto xl:mr-10 xl:max-h-full xl:h-auto xl:-mt-8 xl:relative">
+                <div class="break-all max-h-[60%] h-auto overflow-y-auto text-center xl:max-h-[85%] xl:h-auto w-full xl:text-start">
+                    <p id="encryptedMessage" class="mx-8 text-xl h-full sm:text-3xl min-h-full"></p>
+                </div>   
+                <div id="info" class="text-center xl:flex xl:flex-col xl:items-center xl:mt-[20%]">
+                    <img class="hidden xl:block xl:w-[80%]" src="./images/Muñeco.png" alt="person with a magnifying glass">
+                    <h2 class="text-2xl font-bold px-5 sm:text-3xl sm:mb-5 xl:mt-14">Ningun mensaje fue encontrado</h2>
+                    <h3 class="text-xl px-5 sm:text-2xl">Ingresa el texto que desees encriptar o desencriptar</h3>
+                </div>
+                <button id="botonCopiar" class="hidden py-4 rounded-3xl mt-4 w-[80%] bg-transparent text-[#0A3871] border-2 border-[#0A3871] sm:text-2xl xl:absolute xl:bottom-5 transition-all duration-500 ease-in-out hover:bg-blue-300">Copiar</button>
+            </section>
+        </main>
+        
+        
+        <footer class=" w-full h-max text-center sm:-mt-10 xl:-mt-12 text-xl leading-10">
+            <p>Rodrigo Huertos - Challenge: "Encriptador" <br><a class=" transition-all duration-500 ease-in-out hover:text-blue-400" href="https://github.com/XxZARKx/Challenge-Encriptador">gitHub <i class="fab fa-github-square fa scale-150"></i></a></p>
+        </footer>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
